@@ -1,0 +1,16 @@
+.searchbox-container{
+    border: darkgrey;
+    border-style: solid;
+}
+
+.searchbox-container input{
+    width: 90%;
+    height: 30px;
+    border: none;
+    font-size: xx-large;
+    text-transform: capitalize;
+}
+
+.searchbox-container img{
+    width: 35px;
+}
