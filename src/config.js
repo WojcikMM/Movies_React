@@ -12,7 +12,7 @@ const DEV_VARIABLES = {
   const PRD_VARIABLES = {
     movieApi:{
         key:"f3e9f7d1677c7aa63c9ab526381eeceb",
-        url:"https://api.themoviedb.pl",
+        url:"https://api.themoviedb.org",
         version:"3",
         language:"pl-PL",
         pre_url:`https://api.themoviedb.pl/3/`,
@@ -21,7 +21,7 @@ const DEV_VARIABLES = {
   };
 
 
-const Config = process.env.REACT_APP_NODE_ENV === 'production'? PRD_VARIABLES: DEV_VARIABLES;
+const Config = process.env.NODE_ENV === 'development'? DEV_VARIABLES:PRD_VARIABLES;
 
 export default {
     Author:'Michał Wójcik' ,

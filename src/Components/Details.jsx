@@ -14,8 +14,6 @@ class Details extends Component {
   }
 
   componentDidMount(){
-    console.log(ENV.Config.movieApi.pre_url)
-    console.log(process.env.REACT_APP_NODE_ENV)
     fetch(`${ENV.Config.movieApi.pre_url}movie/${this.props.match.params.id}?append_to_response=credits&${ENV.Config.movieApi.after_url}`)
     .then(res => res.json())
     .then(json=>this.setState({movieDetails: json}))
