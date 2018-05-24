@@ -11,7 +11,7 @@ const MoviesContainer = (properties) =>{
         <div>
            {properties.films.map(film => {
             return   <MovieItem key={film.id} id={film.id} posterUrl={film.poster_path.toString()}      title={film.title} startDate={film.release_date} 
-            descriptionString={`${film.overview.length>0 ?film.overview.substring(0,250) : noneDescriptionTextEN}  ${film.overview.length>250?'...':''}`}/>
+            descriptionString={`${film.overview.length>0 ?film.overview.substring(0,250) : noneDescriptionTextEN}  ${film.overview.length>200?'...':''}`}/>
            })}
         </div>
     )

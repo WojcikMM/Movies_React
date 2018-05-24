@@ -1,37 +1,35 @@
-
-/* img:hover {
-    /* -webkit-transform: scaleX(-1);
-    transform: scaleX(-1); */
-    /* transform: rotateY(180deg);
-    transition: 0.6s;
-	transform-style: preserve-3d;
-} */ 
 /* entire container, keeps perspective */
 .flip-container {
-	perspective: 1000px;
+    perspective: 1000px;
+    padding: 2%;
+    float:left;
+    margin:auto;
+    position:relative;
 }
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
 
-.flip-container, .front, .back {
-	width: 320px;
-	height: 480px;
+.back {
+    transform: rotateY(180deg);
+    text-align: center;
+    font-style: oblique;
+    color: #508991;
+    background-color: #172A3A;
+    vertical-align:middle;
 }
 
 /* flip speed goes here */
 .flipper {
 	transition: 0.6s;
 	transform-style: preserve-3d;
-
 	position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -44,33 +42,73 @@
 	transform: rotateY(0deg);
 }
 
-/* back, initially hidden pane */
+.back a{
+    border-radius: 15%;
+    border: 1px solid #03CEA4;
+    padding: 3% 10%;
+    border-style: double;
+    background-color: #03CEA4;
+    text-decoration: none;
+    color: white;
+}
+
+/* start on desktop*/
+@media screen and (min-width: 995px){
+    
+.flip-container, .front, .back {
+    width: 300px;
+    height: 450px;
+}
+    /* back, initially hidden pane */
 .back {
-    transform: rotateY(180deg);
-    text-align: center;
     font-size: larger;
-    font-style: oblique;
-    color: #508991;
-    background-color: #172A3A;
-    position:absolute;
-    vertical-align:middle;
-
 }
-.flip-container-parent{
-    padding: 2%;
-    float:left;
-    margin:auto;
-    position:relative;
-}
-
 .back div {
-    position:relative;
-    top:10%;
+    top:3%;
     text-align:center;
     padding:10%;
 }
 
-/* @media (min-width: 576px)
-.flip-container-parent a {
-    width: 48%;
-} */
+}
+
+    /* start of large tablet styles */
+@media screen and (max-width: 991px) {
+
+.flip-container, .front, .back {
+    width: 220px;
+    height: 360px;
+}
+    /* back, initially hidden pane */
+.back {
+    font-size: initial;
+    padding:3%;
+}
+}
+
+ /* start of medium tablet styles */
+@media screen and (max-width: 767px) {
+   
+    .flip-container, .front, .back {
+        width: 160px;
+        height: 255px;
+    }
+  /* back, initially hidden pane */
+.back {
+    font-size: x-small;
+    top:5%;
+    padding:10%;
+}
+}
+ /* start of phone styles */
+@media screen and (max-width: 479px) {
+   
+    .flip-container, .front, .back {
+        width: 130px;
+        height: 210px;
+    }
+    /* back, initially hidden pane */
+.back {
+    font-size: x-small;
+    padding: 1%;
+}
+}

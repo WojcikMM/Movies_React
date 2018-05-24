@@ -10,20 +10,19 @@ class MovieItem extends Component {
     render () {
         
         return (
-              <Link className='flip-container-parent' to={`/details/${this.props.id}`} href={`/movie/${this.props.id}`}>
                  <div className='flip-container'>
                     <div className='flipper'>
                             <img src={this.getPosterUrl()} alt="undefined poster" className="front"/>
                             <div className="back">
-                                <div>
                                     <h3>{this.props.title}</h3>
                                     <p>{this.props.startDate}</p>
                                     <p>{this.props.descriptionString}</p>
-                                </div>
+                                    <Link to={`/details/${this.props.id}`} href={`/movie/${this.props.id}`}>
+                                    Details
+                                    </Link>
                             </div>
                     </div>
                  </div>
-             </Link>
         )
     }
 }
