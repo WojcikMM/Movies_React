@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SearchBox from './_SearchBox';
+import {SearchBox} from './_SearchBox';
 import '../Styles/App.css'
 import MoviesContainer from './_MoviesContainer';
 import ENV from '../config'
@@ -26,7 +26,7 @@ componentDidMount(){
       <div className="container">
      <SearchBox/>
      <section>
-      <h2 className='center'>New releasess</h2>
+      <h1 className='center'>Latest releases</h1>
       <MoviesContainer films={this.state.popularFilmArray}/>
       </section>
     </div>

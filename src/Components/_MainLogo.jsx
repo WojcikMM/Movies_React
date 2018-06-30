@@ -6,7 +6,7 @@ const MainLogo = (properties) =>{
     return (
         <div>
            <Link to="/"  className='main-logo'>
-           <img alt='Logo strony' src={properties.logoUrl} className='center'/>
+           <img alt='Logo strony' src={properties.logoUrl} className='center-logo'/>
            </Link> 
         </div>
     )

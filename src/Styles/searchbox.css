@@ -1,16 +1,20 @@
-.searchbox-container{
-    border: darkgrey;
-    border-style: solid;
+input#searchBoxId {
+    width: 30%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('http://moviee.surge.sh/static/media/search.8a0c8c4e.svg');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin: 0 auto;
+    display: block;
 }
 
-.searchbox-container input{
-    width: 90%;
-    height: 30px;
-    border: none;
-    font-size: xx-large;
-    text-transform: capitalize;
-}
-
-.searchbox-container img{
-    width: 35px;
+input#searchBoxId:focus{
+    width: 80%;
 }
